@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-//@WebServlet("/TestDbServlet")
+@WebServlet("/TestDbServlet")
 public class TestDbServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
