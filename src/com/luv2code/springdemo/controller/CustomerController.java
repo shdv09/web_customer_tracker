@@ -20,4 +20,9 @@ public class CustomerController {
 
         return "list-customers";
     }
+
+    @GetMapping("showFormForAdd")
+    public String addCustomer() {
+        return "add-customer";
+    }
 }
