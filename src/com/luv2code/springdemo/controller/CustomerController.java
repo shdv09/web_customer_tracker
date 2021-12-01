@@ -1,5 +1,6 @@
 package com.luv2code.springdemo.controller;
 
+import com.luv2code.springdemo.entity.Customer;
 import com.luv2code.springdemo.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +23,9 @@ public class CustomerController {
     }
 
     @GetMapping("showFormForAdd")
-    public String addCustomer() {
+    public String showFormForAdd(Model theModel) {
+        Customer customer = new Customer();
+        theModel.addAttribute("customer", customer);
         return "add-customer";
     }
 }
